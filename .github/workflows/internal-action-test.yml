@@ -1,0 +1,11 @@
+name: hello_world_internal_action
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: test internal action from org-1/internal-action
+      uses: Internal-Actions/ansh121-internal-action-7@main
